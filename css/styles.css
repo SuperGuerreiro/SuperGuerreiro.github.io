@@ -10130,7 +10130,7 @@ img::-moz-selection {
 }
 header.masthead {
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 39rem;
   text-align: center;
   color: #fff;
   background-image: url("../assets/img/header-bg-cover.jpg");
@@ -10138,6 +10138,7 @@ header.masthead {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
+  object-fit: cover
 }
 
 
@@ -10159,8 +10160,7 @@ header.masthead .masthead-heading {
   header.masthead {
     padding-top: 17rem;
     padding-bottom: 34rem;
-    height: 100%;
-    width: 100%;
+    object-fit: contain;
   }
     
   header.masthead .masthead-subheading {

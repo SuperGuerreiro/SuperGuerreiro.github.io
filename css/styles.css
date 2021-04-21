@@ -559,7 +559,7 @@ pre code {
   padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 150px;
+  padding-top: 7rem;
 }
 
 @media (min-width: 576px) {
@@ -10159,8 +10159,8 @@ header.masthead .masthead-heading {
   header.masthead {
     padding-top: 17rem;
     padding-bottom: 34rem;
-    max-height: 1080px;
   }
+    
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
     line-height: 2.25rem;

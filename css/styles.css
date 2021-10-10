@@ -10716,7 +10716,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 /* For Mobile */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 480px) {
     .view {
         width: 400px;
     }
@@ -10725,12 +10725,24 @@ section#contact form#contactForm :-ms-input-placeholder {
         height: 1.8rem;
     }
     
+    header.masthead {
+    padding-top: 1rem;
+    padding-bottom: 41rem;
+    text-align: center;
+    color: #fff;
+    background-image: url(../assets/img/header-bg-cover.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    }
+    
     #gallery {
     display: flex;
     flex-wrap: wrap;
     grid-gap: 1px;
     justify-content: center;
-}
+    }
     
     .gallery-item {
     position: relative;
@@ -10738,7 +10750,25 @@ section#contact form#contactForm :-ms-input-placeholder {
     margin: 0.5rem;
     color: #fff;
     cursor: pointer;
-}
+    }
+
+
+@media screen and (min-width: 480px) and (max-width: 680px) {
+    
+    #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1px;
+    justify-content: center;
+    }
+    
+    .gallery-item {
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    }
 
 }
 
@@ -10753,20 +10783,20 @@ section#contact form#contactForm :-ms-input-placeholder {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1px;
     justify-content: center;
-}
+    }
     
     .gallery-item-info li {
     display: inline-block;
     font-size: 0.6rem;
     font-weight: 600;
-}
+    }
 
-.gallery-item-caption {
-    position: absolute;
-    text-align: center;
-    margin-right: 2.2rem;
-    margin-left: 2.2rem;
-}
+    .gallery-item-caption {
+        position: absolute;
+        text-align: center;
+        margin-right: 2.2rem;
+        margin-left: 2.2rem;
+    }
 
 }
 
@@ -10779,13 +10809,13 @@ section#contact form#contactForm :-ms-input-placeholder {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1px;
     justify-content: center;
-}
+    }
     
     .gallery-item-info li {
     display: inline-block;
     font-size: 0.8rem;
     font-weight: 600;
-}
+    }
 
 }  
 
@@ -10798,20 +10828,20 @@ section#contact form#contactForm :-ms-input-placeholder {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1px;
     justify-content: center;
-}
+    }
     
     .gallery-item-info li {
     display: inline-block;
     font-size: 1rem;
     font-weight: 600;
-}
+    }
 
-.gallery-item-caption {
-    position: absolute;
-    text-align: center;
-    margin-right: 2.2rem;
-    margin-left: 2.2rem;
-}
+    .gallery-item-caption {
+        position: absolute;
+        text-align: center;
+        margin-right: 2.2rem;
+        margin-left: 2.2rem;
+    }
       
 
 }

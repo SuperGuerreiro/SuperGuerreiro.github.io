@@ -10721,6 +10721,10 @@ section#contact form#contactForm :-ms-input-placeholder {
         width: 400px;
     }
     
+    #mainNav .navbar-brand img{
+        height: 1.8rem;
+    }
+    
     #gallery {
     display: flex;
     flex-wrap: wrap;
@@ -10740,6 +10744,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /* For Tablets */
 @media screen and (min-width: 680px) and (max-width: 780px) {
+    
+
     
     #gallery {
     display: grid;

@@ -10716,7 +10716,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 /* For Mobile */
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 680px) {
     .view {
         width: 400px;
     }
@@ -10739,10 +10739,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 /* For Tablets */
-@media screen and (min-width: 540px) and (max-width: 780px) {
-    .view {
-        width: 600px;
-    }
+@media screen and (min-width: 680px) and (max-width: 780px) {
     
     #gallery {
     display: grid;

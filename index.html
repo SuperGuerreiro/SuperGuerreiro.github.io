@@ -104,10 +104,10 @@
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
-                                <img class="img-fluid" src="assets/img/albumCovers/BornOfFury.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/albumCovers/crimsonbridgeEP_lowres.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Born Of Fury [EP]</div>
+                                <div class="portfolio-caption-heading">Crimson Bridge [EP]</div>
                                 <div class="portfolio-caption-subheading text-muted">2019</div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                 <div class="portfolio-hover">
                                     <!--<div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
-                                <img class="img-fluid" src="assets/img/albumCovers/InPitchBlack.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/albumCovers/InPitchBlack_lowres.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">In Pitch Black </div>
@@ -213,7 +213,29 @@
 
             <!-- PHOTO SECTION -->
         <section class="page-section bg-light" id="media">
-         <div class="container">
+            <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Media</h2>
+                    <h3 class="section-subheading text-muted">Crimson Bridge on Instagram</h3>
+            </div>
+           <div id="instafeed-container">
+               <div id="gallery">
+                    <!-- This is where the feed will be -->
+                </div>
+            </div> 
+            
+            <script src="js/instafeed.js"></script> 
+            <script type="text/javascript">
+                var userFeed = new Instafeed({
+                    get: 'user',
+                    target: 'gallery',
+                    resolution: 'low_resolution',
+                    limit: 9,
+                    accessToken: 'IGQVJXYnYxaVBRLXMyb041N3F2NDhrYXNFTVo1XzhFLXdCMVVwXzRmUVZA1NDU0SGJ6QlB4NVJZAV3hBcDZAVZAXNlT1JkMXZAlVXliM0Vya21uTmgwUkI4VTlsWU4yN2RNU1diekpCQ0o3ckswcVRZANHVaLQZDZD'
+                });
+                userFeed.run();
+            </script>
+        <!--    
+            <<div class="container">
               <div class="text-center">
                     <h2 class="section-heading text-uppercase">Media</h2>
                     <h3 class="section-subheading text-muted"></h3>
@@ -224,7 +246,7 @@
                             <a class="portfolio-link" data-toggle="modal" href="#mediaModal1">
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
-                                </div>
+                                <!-- </div>
                                 <img class="img-fluid" src="assets/img/bandPhotos/band-photo01.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
@@ -236,7 +258,7 @@
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
                                     <!--<div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
-                                </div>
+                                <!-- </div>
                                 <img class="img-fluid" src="assets/img/bandPhotos/simas.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
@@ -244,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             </section>
 
               <!--  <ul class="timeline">
@@ -439,7 +461,7 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Born Of Fury [EP]</h2>
+                                    <h2 class="text-uppercase">Crimson Bridge [EP]</h2>
                                     <p class="item-intro text-muted">2019</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/albumCovers/BornOfFury.jpg" alt="" />
                                     <p>This is our self titled debut EP.</p>

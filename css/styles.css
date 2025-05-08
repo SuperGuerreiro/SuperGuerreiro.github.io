@@ -10869,5 +10869,25 @@ section#contact form#contactForm :-ms-input-placeholder {
   max-height: 1000px;  /* You can adjust this value depending on the content size */
 }
 
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 10px;
+}
+
+.media-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;           /* Force square images */
+  object-fit: cover;             /* Cover the container */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.media-gallery img:hover {
+  transform: scale(1.03);
+}
+
+
 
 }

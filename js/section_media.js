@@ -14,7 +14,7 @@ async function loadMediaGallery() {
         if (index >= maxVisible) div.classList.add('hidden');
   
         div.innerHTML = `
-          <a href="assets/img/media/${imageName}" data-lightbox="band-gallery" data-title="${imageName}">
+          <a href="assets/img/media/${imageName}" data-lightbox="band-gallery">
             <img src="assets/img/media/${imageName}" alt="${imageName}" />
           </a>
         `;

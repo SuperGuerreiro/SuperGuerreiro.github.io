@@ -36,7 +36,9 @@ var bio2EN = 'In May of 2019, the self-titled debut EP was finally released. At 
 
 var bio3EN = 'In 2020, the plans were laid out for the recording of the album. Unfortunately, due to the COVID-19 pandemic, the process was heavily delayed and left the group uncertain as to when they could get back to work. But after a long waiting period, the band finally resumed the recording of the album in August 2020. In May of 2021, with the production process already well on it’s tracks, the first single was released, entitled "Apostasy": an explosion of sound where the modern meets the old. In July, the second single "Tragedy Befalls" was released, with a more approachable feel yet without dropping their progressive nature. Finally, in August, the third and final single was released, "Ruthless Tides", with a more rhythmic and heavier sound put on display. The full record was released in September 7th, 2021.'
 
-var bio4EN = 'In short, Crimson Bridge are looking for a mix of sonorities, which includes a little bit of everything: from blast beats to hyper melodic passages or even something completely different and technical. In sum, anything that sounds good to us - whether for one reason or another - is valid. Our goal is, deep down, to give back what was "given" to us by music throughout our lives, hoping that this band and its music, mean to you, what it means to us.'
+var bio4EN = 'Currently they are preparing for the release of their second EP, anticipated by the release of new singles. Appearing for the first time at the Comendatio Music Fest, the line-up includes Renato Guerreiro (vocals and guitar), Henrique Simas (guitar), Bernardo Rebelo (drums and backing vocals) and Hugo Capelo (bass).'
+
+var bio5EN = 'In short, Crimson Bridge are looking for a mix of sonorities, which includes a little bit of everything: from blast beats to hyper melodic passages or even something completely different and technical. In sum, anything that sounds good to us - whether for one reason or another - is valid. Our goal is, deep down, to give back what was "given" to us by music throughout our lives, hoping that this band and its music, mean to you, what it means to us.'
 
 
 function loadBio() {
@@ -47,6 +49,7 @@ function loadBio() {
         document.getElementById("bio2").innerHTML = bio2EN;
         document.getElementById("bio3").innerHTML = bio3EN;
         document.getElementById("bio4").innerHTML = bio4EN;
+        document.getElementById("bio5").innerHTML = bio5EN;
         
     }
     
@@ -56,7 +59,7 @@ function loadBio() {
         document.getElementById("bio1").innerHTML = "";
         document.getElementById("bio2").innerHTML = "";
         document.getElementById("bio3").innerHTML = "";
-        document.getElementById("bio4").innerHTML = "";      
+        document.getElementById("bio5").innerHTML = "";      
     }
     
     isClosed = !isClosed;

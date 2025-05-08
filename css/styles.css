@@ -559,7 +559,7 @@ pre code {
   padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 7rem;
+  padding-top: 20rem;
 }
 
 @media (min-width: 576px) {
@@ -10123,6 +10123,18 @@ img::-moz-selection {
     margin-right: 0;
   }
 }
+
+.logo {
+  display: block;         
+  margin-top: 10px;       
+  position: sticky;       
+  top: 0;                
+  z-index: 1000;          
+  width: 100%;            
+  max-width: 300px;       
+  margin: 10px auto;      
+}
+
 header.masthead {
   padding-top: 1rem;
   padding-bottom: 25rem;
@@ -10136,7 +10148,7 @@ header.masthead {
 }
 
 .carousel .masthead {
-  padding-top: 1rem;
+  padding-top: 70px;
   padding-bottom: 25rem;
   text-align: center;
   color: #fff;
@@ -10147,6 +10159,7 @@ header.masthead {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -10154,6 +10167,7 @@ header.masthead {
 .masthead .masthead-subheading {
   font-size: 1.5rem;
   line-height: 1.5rem;
+  margin-top: 0;
   margin-bottom: 25px;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -10726,6 +10740,38 @@ section#contact form#contactForm :-ms-input-placeholder {
     
 }
 
+/* Ensure the bio container is hidden initially */
+.bio-container {
+  max-height: 0;  /* Initially collapsed */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;  /* Smooth transition */
+}
+
+/* When expanded */
+.bio-container.expanded {
+  max-height: 1000px;  /* You can adjust this value depending on the content size */
+}
+
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 10px;
+}
+
+.media-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;           /* Force square images */
+  object-fit: cover;             /* Cover the container */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.media-gallery img:hover {
+  transform: scale(1.03);
+}
+
+
 /* For Mobile */
 @media screen and (max-width: 480px) {
     .view {
@@ -10856,18 +10902,5 @@ section#contact form#contactForm :-ms-input-placeholder {
       
 
 }
-
-/* Ensure the bio container is hidden initially */
-.bio-container {
-  max-height: 0;  /* Initially collapsed */
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;  /* Smooth transition */
-}
-
-/* When expanded */
-.bio-container.expanded {
-  max-height: 1000px;  /* You can adjust this value depending on the content size */
-}
-
 
 }

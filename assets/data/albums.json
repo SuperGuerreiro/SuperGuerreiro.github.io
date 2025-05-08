@@ -1,0 +1,44 @@
+[
+  {
+    "id": "album1",
+    "title": "Crimson Bridge [EP]",
+    "year": "2019",
+    "cover": "assets/img/albumCovers/BornOfFury.jpg",
+    "description": "This is our self titled debut EP.",
+    "extra": "Thank you to Daniel Rodrigues (Artcore) for making the artwork and Rafael Sequeira for the symbols, Alex Galetus for helping us mix and master the last 2 songs and all of our friends and family for their patience and for being with us through this journey.",
+    "credits": [
+      "Renato Guerreiro | Vocals, Guitar, Co-production, Layout",
+      "Daniel Almeida | Guitar",
+      "Nuno Cruz | Bass, Co-production, Mixing, Mastering (Songs 1 & 2)",
+      "Bernardo Rebelo | Drums, Backing Vocals",
+      "Filipe Alaiz | Vocals",
+      "Alex Galetus | Mixing, Mastering (Songs 3 & 4)",
+      "Daniel Rodrigues | Artwork"
+    ],
+    "releaseDate": "Released May 28, 2019",
+    "spotify": "https://open.spotify.com/embed/album/4IbwcIJPGcbynyuoX2e65r"
+  },
+  {
+    "id": "album2",
+    "title": "In Pitch Black",
+    "year": "2021",
+    "cover": "assets/img/albumCovers/InPitchBlack.jpg",
+    "description": "Our debut album 'IN PITCH BLACK', featuring the singles 'APOSTASY', 'TRAGEDY BEFALLS' and 'RUTHLESS TIDES (Feat. João Miguel)'",
+    "extra": "Our hearts are filled with a sense of relief and accomplishment to finally be able to share the culmination of our collective sweat, blood and tears, with you all. We hope you play this loudly and on repeat, singing and playing along to each little detail, rhythm and melody. Enjoy it! <3",
+    "credits": [
+      "Renato Guerreiro | Main vocals & Guitars",
+      "Henrique Simas | Guitars",
+      "Nuno Cruz | Bass",
+      "Bernardo Rebelo | Drums & Backing Vocals",
+      "Miguel Gao Nunes | Piano Arrangement on ‘Into The Unknown’",
+      "Tapebroz | Additional Arrangements & Piano Recording on ‘Into The Unknown’",
+      "João Miguel | Guest Guitars on ‘Ruthless Tides’",
+      "Produced by Crimson Bridge",
+      "Mixed & Mastered by Nuno Cruz",
+      "Pedro Valente | Artwork",
+      "Fitthless | Logo"
+    ],
+    "releaseDate": "Released September 7, 2021",
+    "spotify": "https://open.spotify.com/embed/album/4JLbn0p7kJY2LlsEXAsPcl"
+  }
+]

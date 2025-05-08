@@ -10856,3 +10856,18 @@ section#contact form#contactForm :-ms-input-placeholder {
       
 
 }
+
+/* Ensure the bio container is hidden initially */
+.bio-container {
+  max-height: 0;  /* Initially collapsed */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;  /* Smooth transition */
+}
+
+/* When expanded */
+.bio-container.expanded {
+  max-height: 1000px;  /* You can adjust this value depending on the content size */
+}
+
+
+}

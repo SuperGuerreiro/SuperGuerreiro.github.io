@@ -2447,13 +2447,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #107684;
-  border-color: #107684;
+  background-color: #491cb3;
+  border-color: #303030;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #085d68;
-  border-color: #085d68;
+  background-color: #272427;
+  border-color: #2e2e2e;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -10014,11 +10014,6 @@ p {
   margin-bottom: 4rem;
 }
 
-@media (min-width: 768px) {
-  section {
-    padding: 9rem 0;
-  }
-}
 ::-moz-selection {
   background: #fed136;
   text-shadow: none;
@@ -10140,14 +10135,30 @@ header.masthead {
   background-size: cover;
 }
 
+.carousel .masthead {
+  padding-top: 1rem;
+  padding-bottom: 25rem;
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-header.masthead .masthead-subheading {
+.masthead .masthead-subheading {
   font-size: 1.5rem;
   line-height: 1.5rem;
   margin-bottom: 25px;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-header.masthead .masthead-heading {
+
+.masthead .masthead-heading {
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 3.25rem;

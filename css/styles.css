@@ -10800,6 +10800,25 @@ section#contact form#contactForm :-ms-input-placeholder {
   opacity: 0.5;
 }
 
+.media-item.hidden {
+  display: none;
+}
+
+.show-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #138496;
+}
 
 /* For Mobile */
 @media screen and (max-width: 480px) {

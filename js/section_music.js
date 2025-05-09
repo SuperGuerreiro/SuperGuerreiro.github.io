@@ -1,14 +1,36 @@
+// Declare albums globally so it can be accessed by both rendering the grid and the modal logic
 let albums = [];
 
-fetch('assets/data/albums.json')
-  .then(res => res.json())
+//We need this because we're dynamically loading the content of music-section.html into the #music-container
+fetch('music-section.html')
+  .then(response => response.text())
   .then(data => {
-    albums = data;
-    renderAlbumGrid();
-  });
+    // Inject the music section HTML into the container
+    document.getElementById('music-container').innerHTML = data;
 
-function renderAlbumGrid() {
+    // Now, load the album data and render the grid
+    loadAlbums();
+  })
+  .catch(error => console.error('Error loading music.html:', error));
+
+// Function to load album data and render the grid
+function loadAlbums() {
+  fetch('assets/data/albums.json')
+    .then(res => res.json())
+    .then(data => {
+      albums = data;
+      renderAlbumGrid(albums);
+    })
+    .catch(error => console.error('Error loading albums:', error));
+}
+
+
+function renderAlbumGrid(albums) {
   const grid = document.getElementById('albumGrid');
+  if (!grid) {
+    console.error("Album grid element not found");
+    return;
+  }
 
   albums.forEach(album => {
     const col = document.createElement('div');
@@ -31,7 +53,7 @@ function renderAlbumGrid() {
   });
 }
 
-// Modal population
+// Modal population - listen for clicks on album items to populate the modal itself
 document.addEventListener('click', function (e) {
     const trigger = e.target.closest('[data-id]');
     if (!trigger || !trigger.dataset.target.includes('albumModal')) return;
@@ -76,4 +98,3 @@ document.addEventListener('click', function (e) {
         </button>
     `;
 });
-  

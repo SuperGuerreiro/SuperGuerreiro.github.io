@@ -1,0 +1,32 @@
+<!-- music-section.html -->
+<section class="page-section bg-light" id="portfolio">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Music</h2>
+      <h3 class="section-subheading text-muted"></h3>
+    </div>
+    <div class="row justify-content-md-center" id="albumGrid">
+      <!-- Album cards will be inserted here dynamically -->
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div class="portfolio-modal modal fade" id="albumModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body" id="modal-content">
+                <!-- Album details injected here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

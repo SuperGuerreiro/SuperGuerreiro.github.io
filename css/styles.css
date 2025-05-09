@@ -10135,25 +10135,12 @@ img::-moz-selection {
   margin: 10px auto;      
 }
 
-header.masthead {
-  padding-top: 1rem;
-  padding-bottom: 25rem;
-  text-align: center;
-  color: #fff;
-  background-image: url("../assets/img/header-bg-cover.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-}
-
 .carousel .masthead {
   padding-top: 70px;
   padding-bottom: 25rem;
   text-align: center;
   color: #fff;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   width: 100%;

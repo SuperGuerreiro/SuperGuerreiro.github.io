@@ -1,48 +1,73 @@
-/* Style for each list item */
+.year-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    color: #111;
+}
+
 .show-item {
-    cursor: pointer;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .show-item:hover {
-    background-color: #f4f4f4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the text in the list item */
 .show-item-details {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: space-between;
+    font-size: 1rem;
+    color: #333;
+    font-family: 'Roboto Slab', serif;
+    gap: 1rem;
 }
 
-.show-date, .show-venue, .show-location {
+.show-date,
+.show-venue,
+.show-location {
     flex: 1;
-    text-align: center;
+    min-width: 120px;
 }
 
-/* Style for the modal content */
-.modal-body img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Optional: Make the modal content centered */
-.modal-dialog {
-    max-width: 800px;
-    margin: auto;
-}
-
-
-/* Position the close button in the top-right corner */
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
+    z-index: 1051;
     cursor: pointer;
-    z-index: 1050; /* Ensures the close button stays on top */
 }
 
-.close-modal img {
-    width: 30px; /* Adjust size of close icon */
-    height: 30px;
+.modal-body img {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
 }
+
+@media (max-width: 576px) {
+  .show-item-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .show-date,
+  .show-venue,
+  .show-location {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+

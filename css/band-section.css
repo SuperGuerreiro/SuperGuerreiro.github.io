@@ -1,89 +1,118 @@
 /* Section Styling */
 .band-section {
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-  }
-  
-  .band-photo-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .band-photo {
-    display: flex;
-    width: 100%;
-  }
-  
+  padding: 50px 10px;
+}
+
+.band-section .container {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.band-photo {
+  display: flex;
+  width: 100%;
+}
+
+.member {
+  position: relative;
+  width: 25%; /* 4 members, so each one takes 1/4 of the photo */
+  height: 900px;
+  overflow: hidden;
+}
+
+.band-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top; /* Align image from top */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for transform and filter */
+  filter: grayscale(60%); /* Default to black and white */
+}
+
+/* Zoom Effect */
+.band-photo .member:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+  filter: grayscale(0%); /* Show color on hover */
+}
+
+/* Overlay Styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Darker overlay for better contrast */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  padding: 20px; /* Add padding to avoid text touching the edges */
+  box-sizing: border-box;
+}
+
+.member:hover .overlay {
+  opacity: 0.8;
+}
+
+/* Member Names Styling */
+.member-name {
+  font-size: 1.8rem; /* Larger font size */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for contrast */
+  max-width: 90%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+/* Subtext for Role */
+.member-role {
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: white;
+  margin-top: 5px;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Shadow to improve text contrast */
+  max-width: 90%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+/* Mobile/Touch Hover Effect */
+.member:active .overlay {
+  opacity: 1; /* Show on touch */
+}
+
+@media (max-width: 600px) {
   .member {
-    position: relative;
-    width: 25%; /* 4 members, so each one takes 1/4 of the photo */
-    height: auto;
-    overflow: hidden; /* Prevents overflow if the image scales */
+    width: 100%;     /* Stack vertically on small screens */
+    height: 220px;    /* Slightly taller to fit text */
   }
-  
-  /* Black and White Image Effect */
-  .band-photo img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for transform and filter */
-    filter: grayscale(90%); /* Default to black and white */
-  }
-  
-  /* Zoom Effect */
-  .band-photo .member:hover img {
-    transform: scale(1.1); /* Slight zoom effect */
-    filter: grayscale(0%); /* Show color on hover */
-  }
-  
-  /* Overlay Styling */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75); /* Darker overlay for better contrast */
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: opacity 0.3s ease;
-    padding: 20px; /* Add padding to avoid text touching the edges */
-  }
-  
-  .member:hover .overlay {
-    opacity: 0.8;
-  }
-  
-  /* Member Names Styling */
+
   .member-name {
-    font-size: 1.8rem; /* Larger font size */
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for contrast */
+    font-size: 0.5rem;
   }
-  
-  /* Subtext for Role */
+
   .member-role {
-    font-size: 1.2rem; /* Slightly larger font size */
-    color: white;
-    margin-top: 5px;
-    font-style: italic;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Shadow to improve text contrast */
+    font-size: 0.5rem;
   }
-  
-  /* Mobile/Touch Hover Effect */
-  .member:active .overlay {
-    opacity: 1; /* Show on touch */
+
+  .overlay {
+    padding: 8px;
   }
-  
+}
+
+/* Global box-sizing reset */
+* {
+  box-sizing: border-box;
+}

@@ -33,31 +33,47 @@ function renderAlbumGrid() {
 
 // Modal population
 document.addEventListener('click', function (e) {
-  const trigger = e.target.closest('[data-id]');
-  if (!trigger || !trigger.dataset.target.includes('albumModal')) return;
+    const trigger = e.target.closest('[data-id]');
+    if (!trigger || !trigger.dataset.target.includes('albumModal')) return;
 
-  const id = trigger.getAttribute('data-id');
-  const album = albums.find(a => a.id === id);
-  if (!album) return;
+    const id = trigger.getAttribute('data-id');
+    const album = albums.find(a => a.id === id);
+    if (!album) return;
 
-  const modalContent = document.getElementById('modal-content');
-  modalContent.innerHTML = `
-    <h2 class="text-uppercase">${album.title}</h2>
-    <p class="item-intro text-muted">${album.year}</p>
-    <img class="img-fluid d-block mx-auto" src="${album.cover}" alt="${album.title}" />
-    <p>${album.description}</p>
-    <p>${album.extra}</p>
-    <ul class="list-inline">
-      ${album.credits.map(c => `<li>${c}</li>`).join('')}
-      <p></p>
-      <li>${album.releaseDate}</li>
-      <p></p>
-      <li>
+    const modalContent = document.getElementById('modal-content');
+    modalContent.innerHTML = `
+        <h2 class="text-uppercase">${album.title}</h2>
+        <p class="item-intro text-muted">${album.year}</p>
+        <img class="img-fluid d-block mx-auto" src="${album.cover}" alt="${album.title}" />
+        <p>${album.description}</p>
+        <p>${album.extraDescription}</p>
+
+        <h5>Band Credits</h5>
+        <ul class="list-inline">
+        ${album.bandCredits.map(c => `<li>${c}</li>`).join('')}
+        </ul>
+
+        ${album.extraCredits.length ? `
+        <h5>Guest & Extra Credits</h5>
+        <ul class="list-inline">
+            ${album.extraCredits.map(c => `<li>${c}</li>`).join('')}
+        </ul>` : ''}
+
+        ${album.productionCredits.length ? `
+        <h5>Production Credits</h5>
+        <ul class="list-inline">
+            ${album.productionCredits.map(c => `<li>${c}</li>`).join('')}
+        </ul>` : ''}
+
+        <p><strong>${album.releaseDate}</strong></p>
+
+        <div class="my-3">
         <iframe src="${album.spotify}" width="100%" height="205" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </li>
-    </ul>
-    <button class="btn btn-primary" data-dismiss="modal" type="button">
-      <i class="fas fa-times mr-1"></i> Close
-    </button>
-  `;
+        </div>
+
+        <button class="btn btn-primary" data-dismiss="modal" type="button">
+        <i class="fas fa-times mr-1"></i> Close
+        </button>
+    `;
 });
+  

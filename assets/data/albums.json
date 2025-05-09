@@ -4,16 +4,23 @@
     "title": "Crimson Bridge [EP]",
     "year": "2019",
     "cover": "assets/img/albumCovers/BornOfFury.jpg",
-    "description": "This is our self titled debut EP.",
-    "extra": "Thank you to Daniel Rodrigues (Artcore) for making the artwork and Rafael Sequeira for the symbols, Alex Galetus for helping us mix and master the last 2 songs and all of our friends and family for their patience and for being with us through this journey.",
-    "credits": [
-      "Renato Guerreiro | Vocals, Guitar, Co-production, Layout",
+    "description": "Crimson Bridge's self titled debut EP.",
+    "extraDescription": "Thank you to Daniel Rodrigues (Artcore) for making the artwork and Rafael Sequeira for the symbols, Alex Galetus for helping us mix and master the last 2 songs and all of our friends and family for their patience and for being with us through this journey.",
+    "bandCredits": [
+      "Renato Guerreiro | Vocals, Guitar",
       "Daniel Almeida | Guitar",
-      "Nuno Cruz | Bass, Co-production, Mixing, Mastering (Songs 1 & 2)",
+      "Nuno Cruz | Bass",
       "Bernardo Rebelo | Drums, Backing Vocals",
-      "Filipe Alaiz | Vocals",
-      "Alex Galetus | Mixing, Mastering (Songs 3 & 4)",
+      "Filipe Alaiz | Vocals"
+    ],
+    "extraCredits": [
+      "Rafael Sequeira | Booklet Symbols",
       "Daniel Rodrigues | Artwork"
+    ],
+    "productionCredits": [
+      "Renato Guerreiro | Co-production, Layout",
+      "Nuno Cruz | Co-production, Mixing, Mastering (Songs 1 & 2)",
+      "Alex Galetus | Mixing, Mastering (Songs 3 & 4)"
     ],
     "releaseDate": "Released May 28, 2019",
     "spotify": "https://open.spotify.com/embed/album/4IbwcIJPGcbynyuoX2e65r"
@@ -24,17 +31,23 @@
     "year": "2021",
     "cover": "assets/img/albumCovers/InPitchBlack.jpg",
     "description": "Our debut album 'IN PITCH BLACK', featuring the singles 'APOSTASY', 'TRAGEDY BEFALLS' and 'RUTHLESS TIDES (Feat. João Miguel)'",
-    "extra": "Our hearts are filled with a sense of relief and accomplishment to finally be able to share the culmination of our collective sweat, blood and tears, with you all. We hope you play this loudly and on repeat, singing and playing along to each little detail, rhythm and melody. Enjoy it! <3",
-    "credits": [
+    "extraDescription": "Our hearts are filled with a sense of relief and accomplishment to finally be able to share the culmination of our collective sweat, blood and tears, with you all. We hope you play this loudly and on repeat, singing and playing along to each little detail, rhythm and melody. Enjoy it! <3",
+    "bandCredits": [
       "Renato Guerreiro | Main vocals & Guitars",
       "Henrique Simas | Guitars",
       "Nuno Cruz | Bass",
-      "Bernardo Rebelo | Drums & Backing Vocals",
-      "Miguel Gao Nunes | Piano Arrangement on ‘Into The Unknown’",
-      "Tapebroz | Additional Arrangements & Piano Recording on ‘Into The Unknown’",
-      "João Miguel | Guest Guitars on ‘Ruthless Tides’",
+      "Bernardo Rebelo | Drums & Backing Vocals"
+    ],
+    "extraCredits": [
+      "Renato Guerreiro | Original Piano Arrangement on 'Into The Unknown'",
+      "Miguel Gao Nunes | Additional Piano Arrangement on ‘Into The Unknown’",
+      "Tapebroz | Piano Recording on ‘Into The Unknown’",
+      "João Miguel | Guest Guitars on ‘Ruthless Tides’"
+    ],
+    "productionCredits": [
       "Produced by Crimson Bridge",
       "Mixed & Mastered by Nuno Cruz",
+      "Layout & Design by Renato Guerreiro & Bernardo Rebelo",
       "Pedro Valente | Artwork",
       "Fitthless | Logo"
     ],

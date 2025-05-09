@@ -1,5 +1,57 @@
 [
   {
+    "id": "album3",
+    "title": "Down Into The Abyss [Single]",
+    "year": "2025",
+    "cover": "assets/img/albumCovers/down.jpg",
+    "description": "",
+    "extraDescription": "",
+    "bandCredits": [
+      "Renato Guerreiro | Main vocals & Guitars",
+      "Henrique Simas | Guitars",
+      "Nuno Cruz | Bass",
+      "Bernardo Rebelo | Drums & Backing Vocals"
+    ],
+    "extraCredits": [
+    ],
+    "productionCredits": [
+      "Produced by Crimson Bridge",
+      "Mixed & Mastered by Bernardo Rebelo",
+      "Layout & Design by Bernardo Rebelo & Renato Guerreiro"
+    ],
+    "releaseDate": "Released April 25th, 2025",
+    "spotify": "https://open.spotify.com/embed/track/5JWlZFTz5QKeI9PFvpJkNz"
+  },
+  {
+    "id": "album2",
+    "title": "In Pitch Black",
+    "year": "2021",
+    "cover": "assets/img/albumCovers/InPitchBlack_lowres.jpg",
+    "description": "Our debut album 'IN PITCH BLACK', featuring the singles 'APOSTASY', 'TRAGEDY BEFALLS' and 'RUTHLESS TIDES (Feat. João Miguel)'",
+    "extraDescription": "Our hearts are filled with a sense of relief and accomplishment to finally be able to share the culmination of our collective sweat, blood and tears, with you all. We hope you play this loudly and on repeat, singing and playing along to each little detail, rhythm and melody. Enjoy it! <3",
+    "bandCredits": [
+      "Renato Guerreiro | Main vocals & Guitars",
+      "Henrique Simas | Guitars",
+      "Nuno Cruz | Bass",
+      "Bernardo Rebelo | Drums & Backing Vocals"
+    ],
+    "extraCredits": [
+      "Renato Guerreiro | Original Piano Arrangement on 'Into The Unknown'",
+      "Miguel Gao Nunes | Additional Piano Arrangement on ‘Into The Unknown’",
+      "Tapebroz | Piano Recording on ‘Into The Unknown’",
+      "João Miguel | Guest Guitars on ‘Ruthless Tides’"
+    ],
+    "productionCredits": [
+      "Produced by Crimson Bridge",
+      "Mixed & Mastered by Nuno Cruz",
+      "Layout & Design by Renato Guerreiro & Bernardo Rebelo",
+      "Pedro Valente | Artwork",
+      "Fitthless | Logo"
+    ],
+    "releaseDate": "Released September 7th, 2021",
+    "spotify": "https://open.spotify.com/embed/album/4JLbn0p7kJY2LlsEXAsPcl"
+  },
+  {
     "id": "album1",
     "title": "Crimson Bridge [EP]",
     "year": "2019",
@@ -22,36 +74,7 @@
       "Nuno Cruz | Co-production, Mixing, Mastering (Songs 1 & 2)",
       "Alex Galetus | Mixing, Mastering (Songs 3 & 4)"
     ],
-    "releaseDate": "Released May 28, 2019",
+    "releaseDate": "Released May 28th, 2019",
     "spotify": "https://open.spotify.com/embed/album/4IbwcIJPGcbynyuoX2e65r"
-  },
-  {
-    "id": "album2",
-    "title": "In Pitch Black",
-    "year": "2021",
-    "cover": "assets/img/albumCovers/InPitchBlack.jpg",
-    "description": "Our debut album 'IN PITCH BLACK', featuring the singles 'APOSTASY', 'TRAGEDY BEFALLS' and 'RUTHLESS TIDES (Feat. João Miguel)'",
-    "extraDescription": "Our hearts are filled with a sense of relief and accomplishment to finally be able to share the culmination of our collective sweat, blood and tears, with you all. We hope you play this loudly and on repeat, singing and playing along to each little detail, rhythm and melody. Enjoy it! <3",
-    "bandCredits": [
-      "Renato Guerreiro | Main vocals & Guitars",
-      "Henrique Simas | Guitars",
-      "Nuno Cruz | Bass",
-      "Bernardo Rebelo | Drums & Backing Vocals"
-    ],
-    "extraCredits": [
-      "Renato Guerreiro | Original Piano Arrangement on 'Into The Unknown'",
-      "Miguel Gao Nunes | Additional Piano Arrangement on ‘Into The Unknown’",
-      "Tapebroz | Piano Recording on ‘Into The Unknown’",
-      "João Miguel | Guest Guitars on ‘Ruthless Tides’"
-    ],
-    "productionCredits": [
-      "Produced by Crimson Bridge",
-      "Mixed & Mastered by Nuno Cruz",
-      "Layout & Design by Renato Guerreiro & Bernardo Rebelo",
-      "Pedro Valente | Artwork",
-      "Fitthless | Logo"
-    ],
-    "releaseDate": "Released September 7, 2021",
-    "spotify": "https://open.spotify.com/embed/album/4JLbn0p7kJY2LlsEXAsPcl"
   }
 ]

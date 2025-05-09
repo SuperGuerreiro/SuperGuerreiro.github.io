@@ -10231,7 +10231,15 @@ header.masthead {
   padding: 1.5rem;
   text-align: center;
   background-color: #fff;
+  height: auto; /* Allow the height to grow with content */
+  min-height: 150px;
+  word-wrap: break-word; /* Ensure long text breaks and wraps within the container */
+  overflow-wrap: break-word; /* Additional text wrapping */
+  box-sizing: border-box; /* Includes padding in the height/width calculation */
+  display: block; /* Ensure it's a block element, which will naturally expand with content */
 }
+
+
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

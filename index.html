@@ -157,6 +157,32 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            //Function to scroll to the right section from the shows.html
+            function scrollToHashTarget() {
+                const hash = window.location.hash;
+                if (!hash) return;
+
+                const target = document.querySelector(hash);
+                const navbar = document.querySelector('.navbar');
+
+                if (target) {
+                    // Wait until the browser is really done laying things out
+                    requestAnimationFrame(() => {
+                        const yOffset = navbar ? navbar.offsetHeight : 0;
+                        const y = target.getBoundingClientRect().top + window.pageYOffset - yOffset;
+
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    });
+                }
+            }
+
+            window.addEventListener('load', function () {
+                // Wait for layout + rendering
+                setTimeout(scrollToHashTarget, 200); // Adjust as needed
+            });
+        </script>
         
         <!-- Footer-->
         <footer class="footer py-4">

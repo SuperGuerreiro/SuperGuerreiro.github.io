@@ -1,0 +1,173 @@
+[
+  {
+    "id": "1",
+    "venue": "Comendatio Music Fest",
+    "location": "Paço da Comenda, Portugal",
+    "date": "2025-06-21",
+    "image": "assets/img/shows/comendatio_cartaz.jpg",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "2",
+    "venue": "Massacre Metal Fest",
+    "location": "Vila Franca de Xira, Portugal",
+    "date": "2026-05-09",
+    "image": "assets/img/shows/massacre_cartaz.jpg",
+    "imageLarge": "",
+    "description": ""
+  },  
+  {
+    "id": "3",
+    "venue": "Ponto De Encontro",
+    "location": "Cacilhas, Portugal",
+    "date": "2017-07-07",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "4",
+    "venue": "Mostra de Musica Moderna Almada - Cine Incrível",
+    "location": "Almada, Portugal",
+    "date": "2017-10-14",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "5",
+    "venue": "Festival de Musica Moderna de Corroios - Bar Cineteatro Clube de Corroios",
+    "location": "Corroios, Portugal",
+    "date": "2018-05-14",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "6",
+    "venue": "Stairway Club - Concurso Vagos",
+    "location": "Cascais, Portugal",
+    "date": "2018-05-25",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "7",
+    "venue": "Sociedade Recreativa Estrelas do Feijó",
+    "location": "Feijó, Portugal",
+    "date": "2018-06-09",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "8",
+    "venue": "Festival da Liberdade - Praia dos Moinhos",
+    "location": "Alcochete, Portugal",
+    "date": "2018-06-15",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "9",
+    "venue": "Metal Meltdown - Cine Incrível",
+    "location": "Almada, Portugal",
+    "date": "2019-12-20",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "10",
+    "venue": "Apostasy - Cine Incrível",
+    "location": "Almada, Portugal",
+    "date": "2021-05-28",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "11",
+    "venue": "In Pitch Black - RCA Club",
+    "location": "Lisbon, Portugal",
+    "date": "2021-09-18",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "12",
+    "venue": "Bar Cineteatro Clube de Corroios",
+    "location": "Corroios, Portugal",
+    "date": "2021-10-22",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "13",
+    "venue": "Milagre Metaleiro",
+    "location": "Pindelo Dos Milagres, Portugal",
+    "date": "2021-12-18",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "14",
+    "venue": "Side B Rocks",
+    "location": "Alenquer, Portugal",
+    "date": "2022-07-23",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "15",
+    "venue": "RDT Casino Trafaria",
+    "location": "Trafaria, Portugal",
+    "date": "2022-07-30",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "16",
+    "venue": "Hollywood Spot",
+    "location": "Feijó, Portugal",
+    "date": "2022-10-01",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "17",
+    "venue": "Motoclube Alhandra",
+    "location": "Alhandra, Portugal",
+    "date": "2023-03-18",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "18",
+    "venue": "Hollywood Spot",
+    "location": "Feijó, Portugal",
+    "date": "2023-12-09",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  },
+  {
+    "id": "19",
+    "venue": "Festival PN",
+    "location": "Pinhal Novo, Portugal",
+    "date": "2024-03-23",
+    "image": "",
+    "imageLarge": "",
+    "description": ""
+  }
+]

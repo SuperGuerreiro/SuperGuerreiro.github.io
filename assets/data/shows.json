@@ -40,7 +40,7 @@
     "venue": "Festival de Musica Moderna de Corroios - Bar Cineteatro Clube de Corroios",
     "location": "Corroios, Portugal",
     "date": "2018-05-14",
-    "image": "",
+    "image": "assets/img/shows/2018_corroios.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -49,7 +49,7 @@
     "venue": "Stairway Club - Concurso Vagos",
     "location": "Cascais, Portugal",
     "date": "2018-05-25",
-    "image": "",
+    "image": "assets/img/shows/2018_stairway_cascais.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -58,7 +58,7 @@
     "venue": "Sociedade Recreativa Estrelas do Feijó",
     "location": "Feijó, Portugal",
     "date": "2018-06-09",
-    "image": "",
+    "image": "assets/img/shows/feijo_2018_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -67,7 +67,7 @@
     "venue": "Festival da Liberdade - Praia dos Moinhos",
     "location": "Alcochete, Portugal",
     "date": "2018-06-15",
-    "image": "",
+    "image": "assets/img/shows/2018_festival_liberdade.png",
     "imageLarge": "",
     "description": ""
   },
@@ -76,7 +76,7 @@
     "venue": "Metal Meltdown - Cine Incrível",
     "location": "Almada, Portugal",
     "date": "2019-12-20",
-    "image": "",
+    "image": "assets/img/shows/metalmeltdown_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -85,7 +85,7 @@
     "venue": "Apostasy - Cine Incrível",
     "location": "Almada, Portugal",
     "date": "2021-05-28",
-    "image": "",
+    "image": "assets/img/shows/2021_apostasy_cine.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -94,7 +94,7 @@
     "venue": "In Pitch Black - RCA Club",
     "location": "Lisbon, Portugal",
     "date": "2021-09-18",
-    "image": "",
+    "image": "assets/img/shows/rca_2021_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -103,7 +103,7 @@
     "venue": "Bar Cineteatro Clube de Corroios",
     "location": "Corroios, Portugal",
     "date": "2021-10-22",
-    "image": "",
+    "image": "assets/img/shows/2021_corroios.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -112,7 +112,7 @@
     "venue": "Milagre Metaleiro",
     "location": "Pindelo Dos Milagres, Portugal",
     "date": "2021-12-18",
-    "image": "",
+    "image": "assets/img/shows/milagre_metaleiro_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -121,7 +121,7 @@
     "venue": "Side B Rocks",
     "location": "Alenquer, Portugal",
     "date": "2022-07-23",
-    "image": "",
+    "image": "assets/img/shows/alenquer_scream_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -130,7 +130,7 @@
     "venue": "RDT Casino Trafaria",
     "location": "Trafaria, Portugal",
     "date": "2022-07-30",
-    "image": "",
+    "image": "assets/img/shows/trafaria_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -139,7 +139,7 @@
     "venue": "Hollywood Spot",
     "location": "Feijó, Portugal",
     "date": "2022-10-01",
-    "image": "",
+    "image": "assets/img/shows/hollywood_horus_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -148,7 +148,7 @@
     "venue": "Motoclube Alhandra",
     "location": "Alhandra, Portugal",
     "date": "2023-03-18",
-    "image": "",
+    "image": "assets/img/shows/motoclube_alhandra_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -157,7 +157,7 @@
     "venue": "Hollywood Spot",
     "location": "Feijó, Portugal",
     "date": "2023-12-09",
-    "image": "",
+    "image": "assets/img/shows/hollywood_outless_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   },
@@ -166,7 +166,7 @@
     "venue": "Festival PN",
     "location": "Pinhal Novo, Portugal",
     "date": "2024-03-23",
-    "image": "",
+    "image": "assets/img/shows/festival_pn_cartaz.jpg",
     "imageLarge": "",
     "description": ""
   }

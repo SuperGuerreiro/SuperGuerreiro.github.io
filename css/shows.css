@@ -50,6 +50,12 @@
     background-color: rgba(255, 255, 255, 0.03); /* even lighter for hover, blends smoothly */
 }
 
+.show-item:focus, .show-item.selected {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.03); /* keep the hover background on select */
+}
+
 .show-item-details {
     display: flex;
     align-items: center;

@@ -57,7 +57,7 @@
                 <div id="carousel-modal-container"></div>
                 <!-- Load modal content -->
                 <script>
-                    fetch('carousel-modal.html')
+                    fetch('partials/carousel-modal.html')
                     .then(response => response.text())
                     .then(html => {
                         const container = document.getElementById('carousel-modal-container');
@@ -188,7 +188,7 @@
         <div id="footer-placeholder"></div>
 
         <script>
-            fetch('footer.html') // Use 'partials/footer.html' if stored in a subfolder
+            fetch('partials/footer.html') // Use 'partials/footer.html' if stored in a subfolder
                 .then(res => res.text())
                 .then(html => {
                     document.getElementById('footer-placeholder').innerHTML = html;

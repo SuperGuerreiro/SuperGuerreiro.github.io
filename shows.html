@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Crimson Bridge | Shows</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/shows.css" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="assets/img/navbar-logo.png" alt="" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Music</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#band">Lineup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">Bio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#media">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://crimsonbridge.bandcamp.com/merch"
+                            target="_blank">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shows.html">Shows</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shows Section -->
+    <section class="page-section bg-light" id="shows">
+        <div class="container">
+            <div class="list-group" id="shows-container">
+                <!-- Shows will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Dynamic Show Loader -->
+    <script>
+        fetch('assets/data/shows.json')
+            .then(res => res.json())
+            .then(shows => {
+                const container = document.getElementById('shows-container');
+                const modalContainer = document.createElement('div');
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Ensure clean date comparison
+
+                // Split shows into upcoming and past
+                const upcomingShows = shows.filter(show => new Date(show.date) >= today);
+                const pastShows = shows.filter(show => new Date(show.date) < today);
+
+                // Helper to group shows by year
+                const groupByYear = (showsArray) => {
+                    const grouped = showsArray.reduce((acc, show) => {
+                        const year = new Date(show.date).getFullYear();
+                        if (!acc[year]) acc[year] = [];
+                        acc[year].push(show);
+                        return acc;
+                    }, {});
+                    return Object.keys(grouped).sort((a, b) => b - a).map(year => ({
+                        year,
+                        shows: grouped[year].sort((a, b) => new Date(a.date) - new Date(b.date))
+                    }));
+                };
+
+                const createShowItem = (show) => {
+                    const listItem = document.createElement('a');
+                    listItem.className = 'list-group-item list-group-item-action show-item';
+                    listItem.setAttribute('data-toggle', 'modal');
+                    listItem.setAttribute('href', `#showModal${show.id}`);
+                    listItem.innerHTML = `
+                        <div class="show-item-details">
+                            <span class="show-date">${new Date(show.date).toDateString()}</span> 
+                            <span class="show-venue">${show.venue}</span> 
+                            <span class="show-location">${show.location}</span>
+                        </div>
+                    `;
+                    return listItem;
+                };
+
+                const createShowModal = (show) => {
+                    const modal = document.createElement('div');
+                    modal.className = 'show-modal modal fade';
+                    modal.id = `showModal${show.id}`;
+                    modal.tabIndex = -1;
+                    modal.role = 'dialog';
+                    modal.innerHTML = `
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="close-modal" data-dismiss="modal">
+                                    <img src="assets/img/close-icon.svg" alt="Close modal" />
+                                </div>
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <div class="modal-body">
+                                                <h2 class="text-uppercase">${show.venue}</h2>
+                                                <p class="item-intro text-muted">${show.location} - ${new Date(show.date).toDateString()}</p>
+                                                <img class="img-fluid d-block mx-auto" src="${show.image}" alt="${show.venue}" />
+                                                <p>${show.description}</p>
+                                                <ul class="list-inline">
+                                                    <li>Date: ${new Date(show.date).toDateString()}</li>
+                                                    <li>Location: ${show.location}</li>
+                                                </ul>
+                                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                                    <i class="fas fa-times mr-1"></i> Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    return modal;
+                };
+
+                const renderShowSection = (title, groupedShows) => {
+                    const section = document.createElement('div');
+                    section.innerHTML = `<h3 class="text-center-shows mb-4">${title}</h3>`;
+                    
+                    groupedShows.forEach(group => {
+                        const yearDiv = document.createElement('div');
+                        yearDiv.className = 'year-section';
+                        yearDiv.innerHTML = `<h4 class="year-heading">${group.year}</h4>`;
+
+                        const listGroup = document.createElement('div');
+                        listGroup.className = 'list-group';
+
+                        group.shows.forEach(show => {
+                            const item = createShowItem(show);
+                            listGroup.appendChild(item);
+                            modalContainer.appendChild(createShowModal(show));
+                        });
+
+                        yearDiv.appendChild(listGroup);
+                        section.appendChild(yearDiv);
+                    });
+
+                    container.appendChild(section);
+                };
+
+                // Process and display both sections
+                if (upcomingShows.length) {
+                    const groupedUpcoming = groupByYear(upcomingShows);
+                    renderShowSection('Upcoming Shows', groupedUpcoming);
+                }
+
+                if (pastShows.length) {
+                    const groupedPast = groupByYear(pastShows);
+                    renderShowSection('Past Shows', groupedPast);
+                }
+
+                document.body.appendChild(modalContainer);
+            })
+            .catch(error => {
+                console.error('Error loading shows:', error);
+            });
+    </script>
+
+    <!-- Footer-->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('partials/footer.html') // Use 'partials/footer.html' if stored in a subfolder
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+            .catch(err => {
+                console.error('Footer failed to load:', err);
+            });
+    </script>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Theme JS -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -42,7 +42,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Bio</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#media">Media</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://crimsonbridge.bandcamp.com/merch"  target="_blank">Shop</a></li>
-                        
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="shows.html">Shows</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@
                 <div id="carousel-modal-container"></div>
                 <!-- Load modal content -->
                 <script>
-                    fetch('carousel-modal.html')
+                    fetch('partials/carousel-modal.html')
                     .then(response => response.text())
                     .then(html => {
                         const container = document.getElementById('carousel-modal-container');
@@ -70,6 +70,14 @@
                 </script> 
             </header> 
         </section>
+
+        <!-- Shows Banner -->
+        <a href="shows.html" class="shows-banner-link">
+            <div class="shows-banner text-center">
+                <h3>Check out our upcoming shows!</h3>
+                <span class="btn btn-outline-light mt-2">See All Shows</span>
+            </div>
+        </a>
 
         <!-- Music Section -->
         <div id="music-container">
@@ -157,28 +165,46 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            //Function to scroll to the right section from the shows.html
+            function scrollToHashTarget() {
+                const hash = window.location.hash;
+                if (!hash) return;
+
+                const target = document.querySelector(hash);
+                const navbar = document.querySelector('.navbar');
+
+                if (target) {
+                    // Wait until the browser is really done laying things out
+                    requestAnimationFrame(() => {
+                        const yOffset = navbar ? navbar.offsetHeight : 0;
+                        const y = target.getBoundingClientRect().top + window.pageYOffset - yOffset;
+
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    });
+                }
+            }
+
+            window.addEventListener('load', function () {
+                // Wait for layout + rendering
+                setTimeout(scrollToHashTarget, 200); // Adjust as needed
+            });
+        </script>
         
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <!-- Social Media Icons centered horizontally -->
-                    <div class="col-12 text-center mb-3">
-                        <a href="https://www.instagram.com/crimsonbridgeband/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/crimsonbridgeband/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.youtube.com/@crimsonbridge/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@crimsonbridge/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://crimsonbridge.bandcamp.com" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-bandcamp"></i></a>
-                        <a href="https://open.spotify.com/artist/4iF4G6EWqMxhhvnIern0Eo?si=9j1d8yeMRyGUMXS70TCKEw" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-spotify"></i></a>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center mt-3">
-                        <p>© Crimson Bridge 2025</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+       <!-- Footer-->
+        <div id="footer-placeholder"></div>
+
+        <script>
+            fetch('partials/footer.html') // Use 'partials/footer.html' if stored in a subfolder
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('footer-placeholder').innerHTML = html;
+                })
+                .catch(err => {
+                    console.error('Footer failed to load:', err);
+                });
+        </script>
           
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

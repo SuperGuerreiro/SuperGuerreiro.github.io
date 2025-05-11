@@ -2403,6 +2403,57 @@ textarea.form-control {
   }
 }
 
+.shows-banner-link {
+    text-decoration: none;
+    display: block;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+
+.shows-banner {
+    background-image: 
+        linear-gradient(135deg, rgba(69, 71, 176, 0.8), rgba(30, 30, 30, 0.9)),
+        url('../assets/img/shows-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .shows-banner {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-position: initial; 
+    }
+}
+
+.shows-banner-link:hover .shows-banner {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.shows-banner .btn {
+    pointer-events: none; /* Keeps the entire card clickable without interfering */
+}
+
+.shows-banner-link,
+.shows-banner-link:hover,
+.shows-banner-link:focus {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -5032,8 +5083,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: transparent;
 }
 .list-group-item:first-child {
   border-top-left-radius: inherit;

@@ -68,85 +68,114 @@
             .then(shows => {
                 const container = document.getElementById('shows-container');
                 const modalContainer = document.createElement('div');
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Ensure clean date comparison
 
-                // Sort shows by most recent first (descending date order)
-                shows.sort((a, b) => new Date(b.date) - new Date(a.date));
+                // Split shows into upcoming and past
+                const upcomingShows = shows.filter(show => new Date(show.date) >= today);
+                const pastShows = shows.filter(show => new Date(show.date) < today);
 
-                // Group shows by year
-                const showsByYear = shows.reduce((acc, show) => {
-                    const year = new Date(show.date).getFullYear();
-                    if (!acc[year]) {
-                        acc[year] = [];
-                    }
-                    acc[year].push(show);
-                    return acc;
-                }, {});
+                // Helper to group shows by year
+                const groupByYear = (showsArray) => {
+                    const grouped = showsArray.reduce((acc, show) => {
+                        const year = new Date(show.date).getFullYear();
+                        if (!acc[year]) acc[year] = [];
+                        acc[year].push(show);
+                        return acc;
+                    }, {});
+                    return Object.keys(grouped).sort((a, b) => b - a).map(year => ({
+                        year,
+                        shows: grouped[year].sort((a, b) => new Date(a.date) - new Date(b.date))
+                    }));
+                };
 
-                // Sort the years in descending order
-                const sortedYears = Object.keys(showsByYear).sort((a, b) => b - a);
+                const createShowItem = (show) => {
+                    const listItem = document.createElement('a');
+                    listItem.className = 'list-group-item list-group-item-action show-item';
+                    listItem.setAttribute('data-toggle', 'modal');
+                    listItem.setAttribute('href', `#showModal${show.id}`);
+                    listItem.innerHTML = `
+                        <div class="show-item-details">
+                            <span class="show-date">${new Date(show.date).toDateString()}</span> 
+                            <span class="show-venue">${show.venue}</span> 
+                            <span class="show-location">${show.location}</span>
+                        </div>
+                    `;
+                    return listItem;
+                };
 
-                // Loop through each year and show
-                sortedYears.forEach(year => {
-                    const yearSection = document.createElement('div');
-                    yearSection.className = 'year-section';
-                    yearSection.innerHTML = `<h4 class="year-heading">${year}</h4>`;
-                    
-                    const yearShows = showsByYear[year];
-
-                    yearShows.forEach(show => {
-                        // Show List Item in a single line
-                        const listItem = document.createElement('a');
-                        listItem.className = 'list-group-item list-group-item-action show-item';
-                        listItem.setAttribute('data-toggle', 'modal');
-                        listItem.setAttribute('href', `#showModal${show.id}`);
-                        listItem.innerHTML = `
-                            <div class="show-item-details">
-                                <span class="show-date">${new Date(show.date).toDateString()}</span> 
-                                <span class="show-venue">${show.venue}</span> 
-                                <span class="show-location">${show.location}</span>
-                            </div>
-                        `;
-                        yearSection.appendChild(listItem);
-
-                        // Modal
-                        const modal = document.createElement('div');
-                        modal.className = 'show-modal modal fade';
-                        modal.id = `showModal${show.id}`;
-                        modal.tabIndex = -1;
-                        modal.role = 'dialog';
-                        modal.innerHTML = `
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="close-modal" data-dismiss="modal">
-                                        <img src="assets/img/close-icon.svg" alt="Close modal" />
-                                    </div>
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-lg-8">
-                                                <div class="modal-body">
-                                                    <h2 class="text-uppercase">${show.venue}</h2>
-                                                    <p class="item-intro text-muted">${show.location} - ${new Date(show.date).toDateString()}</p>
-                                                    <img class="img-fluid d-block mx-auto" src="${show.image}" alt="${show.venue}" />
-                                                    <p>${show.description}</p>
-                                                    <ul class="list-inline">
-                                                        <li>Date: ${new Date(show.date).toDateString()}</li>
-                                                        <li>Location: ${show.location}</li>
-                                                    </ul>
-                                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                                        <i class="fas fa-times mr-1"></i> Close
-                                                    </button>
-                                                </div>
+                const createShowModal = (show) => {
+                    const modal = document.createElement('div');
+                    modal.className = 'show-modal modal fade';
+                    modal.id = `showModal${show.id}`;
+                    modal.tabIndex = -1;
+                    modal.role = 'dialog';
+                    modal.innerHTML = `
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="close-modal" data-dismiss="modal">
+                                    <img src="assets/img/close-icon.svg" alt="Close modal" />
+                                </div>
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <div class="modal-body">
+                                                <h2 class="text-uppercase">${show.venue}</h2>
+                                                <p class="item-intro text-muted">${show.location} - ${new Date(show.date).toDateString()}</p>
+                                                <img class="img-fluid d-block mx-auto" src="${show.image}" alt="${show.venue}" />
+                                                <p>${show.description}</p>
+                                                <ul class="list-inline">
+                                                    <li>Date: ${new Date(show.date).toDateString()}</li>
+                                                    <li>Location: ${show.location}</li>
+                                                </ul>
+                                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                                    <i class="fas fa-times mr-1"></i> Close
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        `;
-                        modalContainer.appendChild(modal);
+                        </div>
+                    `;
+                    return modal;
+                };
+
+                const renderShowSection = (title, groupedShows) => {
+                    const section = document.createElement('div');
+                    section.innerHTML = `<h3 class="text-center mb-4">${title}</h3>`;
+                    
+                    groupedShows.forEach(group => {
+                        const yearDiv = document.createElement('div');
+                        yearDiv.className = 'year-section';
+                        yearDiv.innerHTML = `<h4 class="year-heading">${group.year}</h4>`;
+
+                        const listGroup = document.createElement('div');
+                        listGroup.className = 'list-group';
+
+                        group.shows.forEach(show => {
+                            const item = createShowItem(show);
+                            listGroup.appendChild(item);
+                            modalContainer.appendChild(createShowModal(show));
+                        });
+
+                        yearDiv.appendChild(listGroup);
+                        section.appendChild(yearDiv);
                     });
 
-                    container.appendChild(yearSection);
-                });
+                    container.appendChild(section);
+                };
+
+                // Process and display both sections
+                if (upcomingShows.length) {
+                    const groupedUpcoming = groupByYear(upcomingShows);
+                    renderShowSection('Upcoming Shows', groupedUpcoming);
+                }
+
+                if (pastShows.length) {
+                    const groupedPast = groupByYear(pastShows);
+                    renderShowSection('Past Shows', groupedPast);
+                }
 
                 document.body.appendChild(modalContainer);
             })
@@ -156,26 +185,18 @@
     </script>
 
     <!-- Footer-->
-    <footer class="footer py-4">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <!-- Social Media Icons centered horizontally -->
-                <div class="col-12 text-center mb-3">
-                    <a href="https://www.instagram.com/crimsonbridgeband/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/crimsonbridgeband/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/@crimsonbridge/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.tiktok.com/@crimsonbridge/" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://crimsonbridge.bandcamp.com" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-bandcamp"></i></a>
-                    <a href="https://open.spotify.com/artist/4iF4G6EWqMxhhvnIern0Eo?si=9j1d8yeMRyGUMXS70TCKEw" target="_blank" class="btn btn-dark btn-social mx-2"><i class="fab fa-spotify"></i></a>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 text-center mt-3">
-                    <p>© Crimson Bridge 2025</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html') // Use 'partials/footer.html' if stored in a subfolder
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+            .catch(err => {
+                console.error('Footer failed to load:', err);
+            });
+    </script>
 
     <!-- Bootstrap core JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

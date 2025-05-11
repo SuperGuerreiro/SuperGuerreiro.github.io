@@ -81,7 +81,7 @@
                     }, {});
                     return Object.keys(grouped).sort((a, b) => b - a).map(year => ({
                         year,
-                        shows: grouped[year].sort((a, b) => new Date(a.date) - new Date(b.date))
+                        shows: grouped[year].sort((a, b) => new Date(b.date) - new Date(a.date))
                     }));
                 };
 

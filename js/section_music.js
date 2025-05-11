@@ -66,7 +66,7 @@ document.addEventListener('click', function (e) {
     modalContent.innerHTML = `
         <h2 class="text-uppercase">${album.title}</h2>
         <p class="item-intro text-muted">${album.year}</p>
-        <img class="img-fluid d-block mx-auto" src="${album.cover}" alt="${album.title}" />
+        <img class="img-fluid-album-modal d-block mx-auto" src="${album.cover}" alt="${album.title}" />
         <p>${album.description}</p>
         <p>${album.extraDescription}</p>
 

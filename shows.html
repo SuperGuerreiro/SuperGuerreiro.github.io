@@ -49,10 +49,6 @@
     <!-- Shows Section -->
     <section class="page-section bg-light" id="shows">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Shows</h2>
-                <h3 class="section-subheading text-muted">Catch us live on stage!</h3>
-            </div>
             <div class="list-group" id="shows-container">
                 <!-- Shows will be loaded here -->
             </div>
@@ -143,7 +139,7 @@
 
                 const renderShowSection = (title, groupedShows) => {
                     const section = document.createElement('div');
-                    section.innerHTML = `<h3 class="text-center mb-4">${title}</h3>`;
+                    section.innerHTML = `<h3 class="text-center-shows mb-4">${title}</h3>`;
                     
                     groupedShows.forEach(group => {
                         const yearDiv = document.createElement('div');

@@ -3,48 +3,70 @@
   margin-top: 0.5rem;
 }
 
+.text-center-shows {
+  text-align: center !important;
+  color: #fff;
+}
+
+.page-section {
+  padding: 4rem 0;
+  background-image: url("../assets/img/map-image.png");
+  background-size: contain; /* shows full image without zoom */
+  background-position: center center; /* keeps image centered */
+  background-attachment: fixed; /* optional parallax-like effect */
+  min-height: 100vh;
+}
+
+
+
 .year-heading {
     font-size: 1.75rem;
     font-weight: 700;
     margin: 2rem 0 1rem;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5rem;
-    color: #111;
+    color: #fff;
 }
 
 .show-item {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 1rem;
-    margin-bottom: 0.2rem;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 0.75rem auto; /* centers the card horizontally */
+    max-width: 900px; /* set a max width */
+    width: 90%; /* optional: scales nicely on smaller screens */
+    background-color: rgba(168, 168, 168, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    border-radius: 12px;
 }
 
 .show-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.03); /* even lighter for hover, blends smoothly */
 }
 
 .show-item-details {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     font-size: 1rem;
-    color: #333;
+    color: #fff;
     font-family: 'Roboto Slab', serif;
-    gap: 1rem;
+    gap: 0.5rem;
 }
+
 
 .show-date,
 .show-venue,
 .show-location {
     flex: 1;
     min-width: 120px;
+    color: #ffffff;
 }
 
 .close-modal {

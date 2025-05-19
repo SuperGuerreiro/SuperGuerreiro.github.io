@@ -1,5 +1,29 @@
 [
   {
+    "id": "album4",
+    "title": "Bound By Eternity To Death [Single]",
+    "year": "2025",
+    "cover": "assets/img/albumCovers/boundcapa.jpg",
+    "description": "",
+    "extraDescription": "",
+    "bandCredits": [
+      "Renato Guerreiro | Main vocals & Guitars",
+      "Henrique Simas | Guitars",
+      "Nuno Cruz | Bass",
+      "Bernardo Rebelo | Drums & Backing Vocals"
+    ],
+    "extraCredits": [
+      "André Nogueira, Daniel Almeida, Filipe Alaiz, Pedro Pinheiro | Gang Shout"
+    ],
+    "productionCredits": [
+      "Produced by Crimson Bridge",
+      "Mixed & Mastered by Bernardo Rebelo",
+      "Layout & Design by Bernardo Rebelo & Renato Guerreiro"
+    ],
+    "releaseDate": "Released April 25th, 2025",
+    "spotify": "https://open.spotify.com/embed/track/5JWlZFTz5QKeI9PFvpJkNz"
+  },
+  {
     "id": "album3",
     "title": "Down Into The Abyss [Single]",
     "year": "2025",

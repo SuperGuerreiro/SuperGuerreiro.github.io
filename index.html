@@ -62,9 +62,16 @@
                     .then(html => {
                         const container = document.getElementById('carousel-modal-container');
                         container.innerHTML = html;
-                
-                        // Re-initialize Bootstrap carousel (and modal safety)
-                        $('#home-carousel').carousel(); // init carousel
+
+                        // Dynamically load the carousel logic script
+                        const script = document.createElement('script');
+                        script.src = 'js/carousel.js';
+
+                        // When the script finishes loading, initialize Bootstrap carousel
+                        script.onload = function () {
+                            $('#home-carousel').carousel(); // init after script logic runs
+                        };
+                        document.body.appendChild(script);
                     })
                     .catch(err => console.error('Error loading carousel modal:', err));
                 </script> 

@@ -1,0 +1,37 @@
+[
+  {
+    "backgroundImage": "assets/img/carousel/bbetd-thumbnail.jpg",
+    "subheading": "New Single Out!",
+    "heading": "BOUND BY ETERNITY TO DEATH",
+    "buttonText": "LISTEN NOW",
+    "buttonLink": "https://youtu.be/ZSxFBWECnlU"
+  },
+  {
+    "backgroundImage": "assets/img/carousel/down-thumbnail.jpg",
+    "subheading": "New Single Out!",
+    "heading": "DOWN INTO THE ABYSS",
+    "buttonText": "LISTEN NOW",
+    "buttonLink": "https://youtu.be/zeeUxkNIFfA"
+  },
+  {
+    "backgroundImage": "assets/img/carousel/band-photo.jpg",
+    "subheading": "Follow Us",
+    "heading": "On Social Media",
+    "buttonText": "Instagram",
+    "buttonLink": "https://instagram.com/crimsonbridgeband"
+  },
+  {
+    "backgroundImage": "assets/img/header-bg-cover.jpg",
+    "subheading": "Check Out Our Debut Album",
+    "heading": "In Pitch Black",
+    "buttonText": "Listen Here",
+    "buttonLink": "https://linktr.ee/crimsonbridgemetal"
+  },
+  {
+    "backgroundImage": "assets/img/carousel/merch.jpg",
+    "subheading": "New Merch Available",
+    "heading": "Visit Our Shop",
+    "buttonText": "Visit Shop",
+    "buttonLink": "https://crimsonbridge.bandcamp.com/merch"
+  }
+]

@@ -1,5 +1,12 @@
 [
   {
+    "backgroundImage": "assets/img/carousel/ruins-thumbnail.jpg",
+    "subheading": "New Single Out!",
+    "heading": "IN THE RUINS OF A DREAM",
+    "buttonText": "LISTEN NOW",
+    "buttonLink": "https://www.youtube.com/watch?v=zmvvy0yKyzg"
+  },
+  {
     "backgroundImage": "assets/img/carousel/bbetd-thumbnail.jpg",
     "subheading": "New Single Out!",
     "heading": "BOUND BY ETERNITY TO DEATH",

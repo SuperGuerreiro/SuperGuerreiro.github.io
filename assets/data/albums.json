@@ -1,5 +1,28 @@
 [
   {
+    "id": "album5",
+    "title": "In The Ruins Of A Dream [Single]",
+    "year": "2025",
+    "cover": "assets/img/albumCovers/ruins.jpg",
+    "description": "",
+    "extraDescription": "",
+    "bandCredits": [
+      "Renato Guerreiro | Main vocals & Guitars",
+      "Henrique Simas | Guitars",
+      "Nuno Cruz | Bass",
+      "Bernardo Rebelo | Drums & Backing Vocals"
+    ],
+    "extraCredits": [
+    ],
+    "productionCredits": [
+      "Produced by Crimson Bridge",
+      "Mixed & Mastered by Bernardo Rebelo",
+      "Layout & Design by Bernardo Rebelo & Renato Guerreiro"
+    ],
+    "releaseDate": "Released June 20th, 2025",
+    "spotify": "https://open.spotify.com/embed/track/2sw7v4n0JXuLp3N3Vg41u8?si=9c042c6e21e740e1"
+  },
+  {
     "id": "album4",
     "title": "Bound By Eternity To Death [Single]",
     "year": "2025",

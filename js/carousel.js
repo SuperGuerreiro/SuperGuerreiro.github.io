@@ -1,9 +1,6 @@
 fetch('assets/data/carousel.json')
-  .then(response => {
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
-    console.log(data);
     const indicators = document.getElementById('carousel-indicators');
     const inner = document.getElementById('carousel-inner');
 
@@ -32,5 +29,16 @@ fetch('assets/data/carousel.json')
       `;
       inner.appendChild(item);
     });
+
+    // Preload all carousel background images
+    const preloadDiv = document.createElement('div');
+    preloadDiv.style.display = 'none';
+    data.forEach(slide => {
+      const img = document.createElement('img');
+      img.src = slide.backgroundImage;
+      preloadDiv.appendChild(img);
+    });
+    document.body.appendChild(preloadDiv);
+
   })
   .catch(error => console.error('Error loading carousel data:', error));

@@ -1,24 +1,10 @@
 [
   {
     "backgroundImage": "assets/img/carousel/ruins-thumbnail.jpg",
-    "subheading": "New Single Out!",
-    "heading": "IN THE RUINS OF A DREAM",
+    "subheading": "New EP Out Now!",
+    "heading": "NOTHINGNESS LIES AHEAD",
     "buttonText": "LISTEN NOW",
-    "buttonLink": "https://www.youtube.com/watch?v=zmvvy0yKyzg"
-  },
-  {
-    "backgroundImage": "assets/img/carousel/bbetd-thumbnail.jpg",
-    "subheading": "New Single Out!",
-    "heading": "BOUND BY ETERNITY TO DEATH",
-    "buttonText": "LISTEN NOW",
-    "buttonLink": "https://youtu.be/ZSxFBWECnlU"
-  },
-  {
-    "backgroundImage": "assets/img/carousel/down-thumbnail.jpg",
-    "subheading": "New Single Out!",
-    "heading": "DOWN INTO THE ABYSS",
-    "buttonText": "LISTEN NOW",
-    "buttonLink": "https://youtu.be/zeeUxkNIFfA"
+    "buttonLink": "https://crimsonbridge.bandcamp.com/album/nothingness-lies-ahead"
   },
   {
     "backgroundImage": "assets/img/carousel/band-photo.jpg",
@@ -29,7 +15,7 @@
   },
   {
     "backgroundImage": "assets/img/header-bg-cover.jpg",
-    "subheading": "Check Out Our Debut Album",
+    "subheading": "Check Out Our Debut Album!",
     "heading": "In Pitch Black",
     "buttonText": "Listen Here",
     "buttonLink": "https://linktr.ee/crimsonbridgemetal"

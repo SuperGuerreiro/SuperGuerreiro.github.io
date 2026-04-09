@@ -1,5 +1,28 @@
 [
   {
+    "id": "album6",
+    "title": "Nothingness Lies Ahead [EP]",
+    "year": "2025",
+    "cover": "assets/img/albumCovers/nothingness_cover.jpg",
+    "description": "",
+    "extraDescription": "",
+    "bandCredits": [
+      "Renato Guerreiro | Main vocals & Guitars",
+      "Henrique Simas | Guitars",
+      "Nuno Cruz | Bass",
+      "Bernardo Rebelo | Drums & Backing Vocals"
+    ],
+    "extraCredits": [
+    ],
+    "productionCredits": [
+      "Produced by Crimson Bridge",
+      "Mixed & Mastered by Bernardo Rebelo",
+      "Artwork by Pedro Valente"
+    ],
+    "releaseDate": "Released August 8th, 2025",
+    "spotify": "https://open.spotify.com/embed/album/76jtGlp54ABcr4TTQjSHYZ"
+  },
+  {
     "id": "album5",
     "title": "In The Ruins Of A Dream [Single]",
     "year": "2025",

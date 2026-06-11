@@ -1,4 +1,26 @@
-[
+[  
+  {
+    "id": "album7",
+    "title": "Unfading Silhouettes",
+    "year": "2026",
+    "cover": "assets/img/albumCovers/unfading.jpg",
+    "description": "",
+    "extraDescription": "",
+    "bandCredits": [
+      "Renato Guerreiro | Main vocals & Guitars",
+      "Henrique Simas | Guitars",
+      "Hugo Capelo | Bass",
+      "Bernardo Rebelo | Drums & Backing Vocals"
+    ],
+    "extraCredits": [
+    ],
+    "productionCredits": [
+      "Produced by Crimson Bridge",
+      "Mixed & Mastered by Bernardo Rebelo"
+    ],
+    "releaseDate": "Released June 12th, 2026",
+    "spotify": "https://open.spotify.com/embed/album/2hqGc5xd1xDlLRK8RNnaUf"
+  },
   {
     "id": "album6",
     "title": "Nothingness Lies Ahead [EP]",

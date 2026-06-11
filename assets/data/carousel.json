@@ -1,5 +1,12 @@
 [
   {
+    "backgroundImage": "assets/img/carousel/unfading-thumbnail.jpg",
+    "subheading": "New Single Out Now!",
+    "heading": "UNFADING SILHOUETTES",
+    "buttonText": "WATCH NOW",
+    "buttonLink": "https://www.youtube.com/watch?v=xHFub8pgtTM"
+  },
+  {
     "backgroundImage": "assets/img/carousel/ruins-thumbnail.jpg",
     "subheading": "New EP Out Now!",
     "heading": "NOTHINGNESS LIES AHEAD",
